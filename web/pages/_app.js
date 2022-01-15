@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Layout from '../components/Layout';
 import '../styles/globals.css';
 
 const MyApp = ({ Component, pageProps }) => {
@@ -12,7 +13,9 @@ const MyApp = ({ Component, pageProps }) => {
         />
         <title>Son Nguyen | Web developer</title>
       </Head>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 };

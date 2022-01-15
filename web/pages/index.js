@@ -4,7 +4,7 @@ import { sanityClient } from '../lib/sanity';
 
 const Home = ({ userData, projects }) => {
   return (
-    <div className="min-h-screen bg-[url('../public/background.svg')] bg-cover text-white flex flex-col items-center py-6">
+    <div className="min-h-screen text-white flex flex-col items-center py-6">
       <Hero user={userData} />
       <ProjectList projects={projects} />
     </div>
