@@ -7,7 +7,12 @@ module.exports = {
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
     },
-    extend: {},
+    extend: {
+      colors: {
+        background: '#121212',
+        link: '#3700b3',
+      },
+    },
   },
   plugins: [],
 };
