@@ -11,7 +11,7 @@ const Home = ({ userData, projects }) => {
   );
 };
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const accessToken = process.env.GITHUB_ACCESS_TOKEN;
 
   const res = await fetch('https://api.github.com/users/ntson', {
@@ -40,7 +40,6 @@ export const getStaticProps = async () => {
       userData,
       projects: projects,
     },
-    revalidate: 1,
   };
 };
 
