@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import ProjectLink from './ProjectLink';
 
 const Project = ({ project }) => {
   return (
@@ -16,16 +17,8 @@ const Project = ({ project }) => {
 
       <div className="flex flex-col gap-2">
         <p>{project.description}</p>
-        <a className="underline block" href={project.githubUrl} target="_blank">
-          GitHub
-        </a>
-        <a
-          className="underline block"
-          href={project.homepageUrl}
-          target="_blank"
-        >
-          Live
-        </a>
+        <ProjectLink url={project.githubUrl}>GitHub</ProjectLink>
+        <ProjectLink url={project.homepageUrl}>Live</ProjectLink>
         <p>Tech stack: {project.tech.join(', ')}</p>
       </div>
     </article>
