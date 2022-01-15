@@ -1,5 +1,3 @@
-const path = require('path');
-
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
@@ -9,7 +7,12 @@ module.exports = {
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
     },
-    extend: {},
+    extend: {
+      colors: {
+        'main-gradient': '#121212',
+        'secondary-gradient': '#303030',
+      },
+    },
   },
   plugins: [],
 };
